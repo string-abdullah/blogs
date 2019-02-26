@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blogs',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'blog_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'blog',
+        'USER': 'sarwarclasses',
+        'PASSWORD':'password',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
