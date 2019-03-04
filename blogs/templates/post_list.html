@@ -1,0 +1,16 @@
+<body>
+<h1 style="color:red;margin-left:500px">{{title}} </h1>
+
+{% for obj in obj_list %}
+<div style="background-color:green;border:solid 1px;width:100%;height:35%"  >
+<div style="float:left;width:70%;height:100%"><h2 style="color:black">{{obj.id}}<a href="{{obj.get_absolute_url}}"> {{obj.title}}</a></h2>
+<p>
+	{{obj.content}}
+</p>
+
+</div>
+<img src="{{obj.getImageUrl}}" style="float:right;border:solid 1px;width:28%;height:100%" >
+</div><br>
+{% endfor %}
+
+<body>
